@@ -7,9 +7,9 @@ jobs:
       TERM: "xterm-256color"
       GitHubMail: "rokibhasansagar2014@outlook.com"
       GitHubName: "rokibhasansagar"
-      REPO: "device_oppo_PCCM00"
-      VENDOR: "oppo"
-      CODENAME: "PCCM00"
+      REPO: "device_xiaomi_tissot"
+      VENDOR: "xiaomi"
+      CODENAME: "tissot"
       # FLAVOR: "userdebug"
     working_directory: /home/builder/shrp/
     steps:

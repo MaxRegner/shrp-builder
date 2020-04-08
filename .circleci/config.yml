@@ -7,9 +7,9 @@ jobs:
       TERM: "xterm-256color"
       GitHubMail: "rokibhasansagar2014@outlook.com"
       GitHubName: "rokibhasansagar"
-      REPO: "android_device_xiaomi_sirius-twrp"
+      REPO: "device_xiaomi_beryllium"
       VENDOR: "xiaomi"
-      CODENAME: "sirius"
+      CODENAME: "beryllium"
       # FLAVOR: "userdebug"
     working_directory: /home/builder/shrp/
     steps:

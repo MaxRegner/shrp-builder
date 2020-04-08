@@ -6,13 +6,17 @@ jobs:
     environment:
       GitHubMail: "rokibhasansagar2014@outlook.com"
       GitHubName: "rokibhasansagar"
+      REPO: "recovery-device-xiaomi-rosy"
+      VENDOR: "xiaomi"
+      CODENAME: "rosy"
+      # FLAVOR: "userdebug"
     working_directory: /home/builder/shrp/
     steps:
       - run:
           name: Ultimate Builder
           command: |
-            wget -q https://gist.github.com/rokibhasansagar/29aa473411fe462262b5134975ba2fa4/raw/shrp_builder.sh
-            source shrp_builder.sh
+            wget -q https://gist.github.com/rokibhasansagar/6d75f2a618765e8d35fa9674e411f712/raw/single.sh
+            source single.sh
 workflows:
   version: 2
   skyhawk_core:

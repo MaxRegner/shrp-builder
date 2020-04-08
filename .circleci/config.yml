@@ -7,17 +7,28 @@ jobs:
       TERM: "xterm-256color"
       GitHubMail: "rokibhasansagar2014@outlook.com"
       GitHubName: "rokibhasansagar"
-      REPO: "device_xiaomi_beryllium"
+      REPO: "android_device_xiaomi_sirius-twrp"
       VENDOR: "xiaomi"
-      CODENAME: "beryllium"
+      CODENAME: "xmsirius"
       # FLAVOR: "userdebug"
     working_directory: /home/builder/shrp/
     steps:
       - run:
+          name: Create & Run a keep-alive shell
+          command: |
+            # Basic trick to ping every 8 minutes in the background
+            cat \<< EOF > /tmp/act.sh
+            #!/bin/bash
+            while true; do
+              echo -e "\n" && sleep 480
+            done
+            EOF
+            chmod a+x /tmp/act.sh
+      - run:
           name: Ultimate Builder
           command: |
             wget -q https://gist.github.com/rokibhasansagar/6d75f2a618765e8d35fa9674e411f712/raw/single.sh
-            source single.sh
+            /tmp/act.sh & source single.sh
 workflows:
   version: 2
   skyhawk_core:

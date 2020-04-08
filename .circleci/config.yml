@@ -6,9 +6,9 @@ jobs:
     environment:
       GitHubMail: "rokibhasansagar2014@outlook.com"
       GitHubName: "rokibhasansagar"
-      REPO: "device_xiaomi_santoni"
+      REPO: "device_xiaomi_kenzo"
       VENDOR: "xiaomi"
-      CODENAME: "santoni"
+      CODENAME: "kenzo"
       # FLAVOR: "userdebug"
     working_directory: /home/builder/shrp/
     steps:
